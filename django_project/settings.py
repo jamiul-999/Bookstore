@@ -46,8 +46,9 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     # Local
-    "accounts.apps.AccountsConfig",  # new
-    "pages.apps.PagesConfig",  # new
+    "accounts.apps.AccountsConfig", 
+    "pages.apps.PagesConfig",
+    "books.apps.BooksConfig",
 ]
 
 MIDDLEWARE = [
