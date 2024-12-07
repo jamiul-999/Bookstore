@@ -17,4 +17,11 @@ class CustomUserAdmin(UserAdmin):
         "username",
         "is_superuser",
     ]
+    
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        if 'usable_password' in form.base_fields:
+            del form.base_fields['usable_password']
+        return form
+    
 admin.site.register(CustomUser, CustomUserAdmin)
